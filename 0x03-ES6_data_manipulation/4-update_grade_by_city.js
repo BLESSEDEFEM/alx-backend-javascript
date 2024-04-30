@@ -15,3 +15,7 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
     // if (!item2) {
     //   student.grade = 'N/A'; // eslint-disable-line no-param-reassign
     // }
+    return { ...student, grade: item2 ? item2.grade : 'N/A' };
+    // return item2 ? {...student, ...item2} : student,  student.grade = 'M/A';
+  });
+  return cityStudents;
